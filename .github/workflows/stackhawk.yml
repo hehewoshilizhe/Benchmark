@@ -51,13 +51,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Start your service
-        run: ./your-service.sh &                  # ✏️ Update this to run your own service to be scanned
+
 
       - name: Run HawkScan
         uses: stackhawk/hawkscan-action@4c3258cd62248dac6d9fe91dd8d45928c697dee0
         continue-on-error: true                   # ✏️ Set to false to break your build on scan errors
         with:
-          apiKey: ${{ secrets.HAWK_API_KEY }}
+          apiKey: 1f626043-092f-45e7-8f2e-fe94ea213e0f
           codeScanningAlerts: true
-          githubToken: ${{ github.token }}
+          githubToken: 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
